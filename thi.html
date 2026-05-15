@@ -328,113 +328,253 @@ cau5.html
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <title>Câu 5</title>
+  <title>Câu 5 - English Learning</title>
   <link rel="stylesheet" href="cau5.css">
 </head>
 
 <body>
-  <!--Header-->
-  <header class='header'>
+
+<!-- HEADER -->
+<header class='header'>
+  <svg class='logo' viewBox='0 0 50 50'>
+    <circle cx='25' cy='25' r='24' class='logo-circle' />
+    <text x='25' y='32' class='logo-text'>EL</text>
+  </svg>
+
+  <div>
     <h1>English Learning</h1>
-    <p>Learn English - Change your future</p>
-  </header>
-
-  <!--NAV-->
-  <nav class='navi'>
-    <div>Trang chủ</div>
-    <div>Khoá học</div>
-    <div>Liên hệ</div>
-  </nav>
-
-  <!--Advert-->
-  <div class='advert'>Ưu đãi 50% học phí hôm nay!
+    <p class="slogan">Learn English - Change Your Future</p>
   </div>
+</header>
 
-  <!--Courses-->
-  <div id='courses'></div>
+<!-- NAV -->
+<nav class='navi'>
+  <div>Trang chủ</div>
+  <div>Khoá học</div>
+  <div>Giáo viên</div>
+  <div>Liên hệ</div>
+</nav>
 
-  <!--Form-->
+<!-- ADVERT -->
+<div class='advert'>
+  <strong>Ưu đãi giảm giá 20% - Ưu đãi đặc biệt ngay trong tháng này</strong>
+</div>
+
+<!-- COURSE -->
+<h2 class="title">Danh sách khoá học</h2>
+<div id="course-list" class="course-container"></div>
+
+<!-- FORM -->
+<section class="form-section">
   <form id='form'>
-    <h2>Đăng ký</h2>
-    <input type='text' id='name' placeholder='Học và Tên'>
-    <button type='submit'>Gửi</button>
-  </form>
+    <h2>Đăng ký khoá học</h2>
 
-  <script src='cau5.js'></
-  script>
+    <input type='text' id='name' placeholder='Họ và tên'><br>
+    <input type='email' id='email' placeholder='Email'><br>
+    <input type='text' id='phone' placeholder='SĐT'><br>
+
+    <select id='course'>
+      <option value=''>Chọn khoá học</option>
+      <option>Giao tiếp</option>
+      <option>IELTS</option>
+    </select><br>
+
+    <input type='text' id='time' placeholder='Thời gian học'><br>
+
+    <button type='submit'>Đăng ký</button>
+  </form>
+</section>
+
+<script src="cau5.js"></script>
 </body>
 </html>
 
 
 
 cau5.css 
-<css>
-    .header {
-  background: rgb(217, 120, 217);
+body {
+  font-family: 'Times New Roman', Times, serif;
+  margin: 0;
+  background: #f5f8ff;
+}
+
+/* LOGO */
+.logo {
+  width: 50px;
+  height: 50px;
+}
+
+.logo-circle {
+  fill: blue;
+}
+
+.logo-text {
+  text-anchor: middle;
+  font-size: 22px;
+  fill: white;
+}
+
+/* HEADER */
+.header {
+  background-color: rgb(86, 44, 178);
   color: white;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 16px;
   padding: 10px;
 }
 
+.slogan {
+  font-style: italic;
+  margin: 0;
+}
+
+/* NAV */
 .navi {
   display: flex;
   justify-content: center;
   gap: 20px;
-  background: lightblue;
+  background-color: rgb(164, 164, 223);
+  padding: 10px;
 }
 
-.advert {
-  width: 100%;
-  height: 200px;
-  border: 2px solid black;
-  background: rgb(236, 236, 177);
+.navi div:hover {
+  background-color: white;
+  cursor: pointer;
+}
+
+/* TITLE */
+.title {
   text-align: center;
-  line-height: 200px;
+}
+
+/* ADVERT (CÓ HOVER) */
+.advert {
+  width: 90%;
+  margin: 20px auto;
+  height: 120px;
+  background-color: wheat;
+  border: 2px solid orange;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
 }
 
 .advert:hover {
-  background: orange;
+  background-color: orange;
   border-color: red;
   font-style: italic;
 }
 
+/* COURSE */
+.course-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* item KHÔNG hover */
 .item {
   width: 200px;
   height: 150px;
-  background: lightgreen;
+  background-color: rgb(128, 128, 216);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
   margin: 10px;
   padding: 10px;
+  text-align: center;
 }
 
-#course {
-  display: flex;
-  justify-content: center;
+/* FORM */
+form {
+  width: 300px;
+  margin: auto;
 }
-</css>
 
+input, select {
+  width: 100%;
+  margin: 10px 0;
+  padding: 8px;
+}
+
+/* responsive */
+@media (max-width: 414px) {
+  form {
+    width: 90%;
+  }
+}
+
+@media (max-width: 1024px) {
+  form {
+    width: 60%;
+  }
+}
+
+@media (max-width: 1440px) {
+  form {
+    width: 400px;
+  }
+}
 
 cau5.js 
-<js>
-var data = [
-  {name: 'Giao tiếp'},
-  {name: 'IELTS'},
-  {name: 'Ngữ pháp'},
-  {name: 'TOEIC'}
+var courses = [
+  {
+    name: "Giao tiếp cơ bản",
+    description: "Học giao tiếp từ đầu",
+    price: "1.000.000đ",
+    date: "01/07/2026"
+  },
+  {
+    name: "IELTS 5.0",
+    description: "Luyện thi IELTS",
+    price: "2.500.000đ",
+    date: "10/07/2026"
+  },
+  {
+    name: "TOEIC 600+",
+    description: "Luyện TOEIC",
+    price: "2.000.000đ",
+    date: "15/07/2026"
+  },
+  {
+    name: "Ngữ pháp nâng cao",
+    description: "Chắc ngữ pháp",
+    price: "1.500.000đ",
+    date: "20/07/2026"
+  }
 ];
 
+var html = "";
 var i = 0;
-var html = '';
 
-while (i < data.length) {
-  html += `<div class='item'>${data[i].name}</div>`;
+while (i < courses.length) {
+  html += `
+    <div class="item">
+      <h3>${courses[i].name}</h3>
+      <p>${courses[i].description}</p>
+      <p>${courses[i].price}</p>
+      <p>${courses[i].date}</p>
+    </div>
+  `;
   i++;
 }
 
+document.getElementById("course-list").innerHTML = html;
+
+/* FORM VALIDATE */
 document.getElementById('form').onsubmit = function(e) {
   var name = document.getElementById('name').value;
-  if(name === ''){
-    alert('Vui lòng nhập tên');
+  var email = document.getElementById('email').value;
+  var phone = document.getElementById('phone').value;
+
+  if (name === '' || email === '' || phone === '') {
+    alert('Vui lòng nhập đầy đủ thông tin');
     e.preventDefault();
   }
 };
-</js>
