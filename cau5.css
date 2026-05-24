@@ -1,0 +1,347 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body{
+    font-family: Arial;
+    background: white;
+}
+/* HEADER */
+
+header{
+    background: lightcoral;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+/* LOGO */
+.logo{
+    margin-right: 20px;
+}
+
+/* MENU */
+nav{
+    background: plum;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+/* GIỚI THIỆU */
+.intro{
+    padding: 30px;
+}
+
+.intro h2{
+    margin-bottom: 15px;
+    color: red;
+}
+
+blockquote{
+    margin-top: 20px;
+    padding: 20px;
+    background: lightcoral;
+    border-left: 5px solid greenyellow;
+}
+/* CÁC DỊCH VỤ */
+
+.service-section{
+
+    padding: 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.service-section h2{
+
+    margin-bottom: 20px;
+}
+
+.container{
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    width: 700px;
+}
+
+.item{
+
+    width: 200px;
+
+    height: 100px;
+
+    background-color: royalblue;
+
+    color: black;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.item:hover{
+
+    background-color: wheat;
+}
+
+.advert{
+
+    width: 100%;
+
+    height: 200px;
+
+    background-color: wheat;
+
+    border: 2px solid orange;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-weight: bold;
+
+    margin-top: 30px;
+}
+
+/* DANH SÁCH DỊCH VỤ */
+
+.list-service{
+
+    padding: 30px;
+}
+
+.list-service h1{
+
+    text-align: center;
+
+    color: black;
+
+    margin-bottom: 30px;
+}
+
+#service-list{
+
+    display: grid;
+
+    grid-template-columns: repeat(3,1fr);
+
+    gap: 20px;
+}
+
+.card{
+
+    background: lightcoral;
+
+    border: 2px solid plum;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    text-align: center;
+
+    padding-bottom: 20px;
+
+    transition: 0.3s;
+}
+
+.card:hover{
+
+    transform: scale(1.03);
+}
+
+.card img{
+
+    width: 100%;
+
+    display: block;
+}
+
+.card h2{
+
+    margin: 15px 0;
+
+    color: black;
+}
+
+.card p{
+
+    padding: 0 15px;
+
+    margin-bottom: 15px;
+}
+
+.card span{
+
+    background: greenyellow;
+
+    padding: 8px 15px;
+
+    border-radius: 5px;
+
+    font-weight: bold;
+}
+
+/* FORM */
+
+.form-section{
+
+    padding: 40px;
+
+    display: flex;
+
+    justify-content: center;
+}
+
+form{
+
+    width: 50%;
+
+    background: lightblue;
+
+    padding: 30px;
+
+    border: 2px solid blue;
+}
+
+form h1{
+
+    text-align: center;
+
+    margin-bottom: 20px;
+
+    color: black;
+}
+
+input,
+textarea{
+
+    width: 100%;
+
+    padding: 12px;
+
+    margin-bottom: 15px;
+
+    border: 2px solid beige;
+}
+
+button{
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: none;
+
+    background: grey;
+
+    color: white;
+
+    font-size: 16px;
+}
+
+/* FOOTER */
+
+footer{
+
+    background: black;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+
+    margin-top: 30px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1440px){
+
+    form{
+        width: 70%;
+    }
+
+}
+
+@media(max-width:1024px){
+
+    #service-list{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    form{
+        width: 90%;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .container{
+        width: 100%;
+    }
+
+    #service-list{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:414px){
+
+    #service-list{
+        grid-template-columns: 1fr;
+    }
+
+    form{
+        width: 100%;
+    }
+
+    nav{
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
